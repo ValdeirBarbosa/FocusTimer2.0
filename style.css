@@ -1,0 +1,17 @@
+:root{
+  --bg-darck-theme:#121214;
+  --bg-ligth-theme:#E5E5E5;
+
+  --dark-color-text:#FFFFFF;
+  --ligth-ligth-text:#29292E;
+
+  --bg-btn-dark:#29292E;
+  --bg-selected-btn-dark:#0A3442;
+
+  --bg-btn-ligth:#E1E1E6;
+  --bg-selected-btn-ligth:#02799D;
+
+  --icon-fill-dark-mode:#C4C4CC;
+  --icon-fill-ligth-mode:#323238;
+
+}
