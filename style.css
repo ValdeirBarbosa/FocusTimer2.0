@@ -1,17 +1,132 @@
-:root{
-  --bg-darck-theme:#121214;
-  --bg-ligth-theme:#E5E5E5;
+:root {
+  --bg-darck-theme: #121214;
+  --bg-ligth-theme: #e5e5e5;
 
-  --dark-color-text:#FFFFFF;
-  --ligth-ligth-text:#29292E;
+  --dark-color-text: #ffffff;
+  --ligth-ligth-text: #29292e;
 
-  --bg-btn-dark:#29292E;
-  --bg-selected-btn-dark:#0A3442;
+  --bg-btn-dark: #29292e;
+  --bg-selected-btn-dark: #0a3442;
 
-  --bg-btn-ligth:#E1E1E6;
-  --bg-selected-btn-ligth:#02799D;
+  --bg-btn-ligth: #e1e1e6;
+  --bg-selected-btn-ligth: #02799d;
 
-  --icon-fill-dark-mode:#C4C4CC;
-  --icon-fill-ligth-mode:#323238;
+  --icon-fill-dark-mode: #c4c4cc;
+  --icon-fill-ligth-mode: #323238;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 
+header {
+  height: 9.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 3.75rem 3.75rem 0 0;
+}
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  display: grid;
+  place-content: center;
+  height: calc(100vh-12.5rem);
+  grid-template-columns: 2fr 1fr;
+  width: 821px;
+  height: 336px;
+
+}
+
+.timer-board {
+  width: 321px;
+  height: 213px;
+  align-self: center;
+  justify-self: center;
+
+}
+.sound-board {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 308px;
+  height: 336px;
+}
+.sound-card {
+  width: 138px;
+  height: 152px;
+  left: 742px;
+  top: 192px;
+  display: flex;
+  gap:2rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  padding: 2rem;
+
+  background: #e1e1e6;
+  border-radius: 24px;
+}
+.sound-card img {
+  width: 44.21px;
+  height: 56px;
+  left: 789px;
+  top: 216px;
+}
+.sound-card  input{
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 90px;
+  height: 4px;
+  background-color: var( --icon-fill-ligth-mode);
+  border-radius: 5px;
+
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 0;
+  background: url('./assets/soundIcons/sliderBall.svg');
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+
+.timer {
+  display: flex;
+  max-width: 20rem;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 126.166px;
+  line-height: 148px;
+  /* identical to box height */
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: var(--icon-fill-ligth-mode);
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 40px;
+}
+
+.controls button {
+  border: none;
+  background: transparent;
+  border-radius: 999px;
+  cursor: pointer;
 }

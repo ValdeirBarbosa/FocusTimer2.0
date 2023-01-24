@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -8,8 +9,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FocusTimer 2.0</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  
+  <header>
+    <img src="./assets/theme/ligth.svg" alt="icone de sol para tema ligth">
+    <img src="./assets/theme/dark.svg" alt="icone de lua para tema dark">
+
+  </header>
+  <div class="page">
+    <main>
+      <div class="timer-board">
+        <div class="timer">
+          <span>00</span>
+          <span>:</span>
+          <span>00</span>
+        </div>
+        <div class="controls">
+          <button class="btn-controls">
+            <img src="./assets/controls/play.svg" alt="botão de play">
+          </button>
+          <button class="btn-controls">
+            <img src="./assets/controls/stop.svg" alt="botão de play">
+          </button>
+          <button class="btn-controls">
+            <img src="./assets/controls/plus.svg" alt="botão de play">
+          </button>
+          <button class="btn-controls">
+            <img src="./assets/controls/minus.svg" alt="botão de play">
+          </button>
+        </div>
+      </div>
+      <div class="sound-board">
+        <div class="sound-card">
+          <img src="./assets/soundIcons/wood.svg" alt="imagem de floresta para seleção de floresta">
+          <input type="range" min="1" max="100" value="50" class="slider">
+
+        </div>
+        <div class="sound-card">
+          <img src="./assets/soundIcons/rain.svg" alt="imagem de floresta para seleção de floresta">
+          <input type="range" min="1" max="100" value="50" class="slider">
+
+        </div>
+        <div class="sound-card">
+          <img src="./assets/soundIcons/coffeShop.svg" alt="imagem de floresta para seleção de floresta">
+        <input type="range" min="1" max="100" value="50" class="slider">
+
+        </div>
+        <div class="sound-card">
+          <img src="./assets/soundIcons/fire.svg" alt="imagem de floresta para seleção de floresta">
+          <input type="range" min="1" max="100" value="50" class="slider">
+
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
 </body>
+
 </html>
