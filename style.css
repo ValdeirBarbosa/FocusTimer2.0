@@ -20,12 +20,24 @@
   box-sizing: border-box;
 }
 
+.body-dark {
+  background-color: var(--bg-darck-theme);
+}
 header {
   height: 9.5rem;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   padding: 3.75rem 3.75rem 0 0;
+}
+header svg{
+  cursor:pointer
+}
+header .hide{
+  display: none;
+}
+header   svg path{
+  fill:var(--ligth-ligth-text)
 }
 .page {
   display: flex;
@@ -40,7 +52,6 @@ main {
   grid-template-columns: 2fr 1fr;
   width: 821px;
   height: 336px;
-
 }
 
 .timer-board {
@@ -48,7 +59,48 @@ main {
   height: 213px;
   align-self: center;
   justify-self: center;
+}
+.timer {
+  display: flex;
+  max-width: 20rem;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 126.166px;
+  line-height: 148px;
+  /* identical to box height */
 
+  text-align: center;
+  text-transform: uppercase;
+}
+.timer-ligth {
+  color: var(--icon-fill-ligth-mode);
+}
+.timer-dark {
+  color: var(--dark-color-text);
+}
+.controls {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 40px;
+}
+
+.controls button {
+  border: none;
+  background: transparent;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.controls  svg path {
+  fill:var(--ligth-ligth-text)
+}
+.controls-dark  svg path {
+  fill:var(--icon-fill-dark-mode)
+}
+.sound-card  svg path{
+ fill:var(--ligth-ligth-text);
 }
 .sound-board {
   display: grid;
@@ -63,13 +115,12 @@ main {
   left: 742px;
   top: 192px;
   display: flex;
-  gap:2rem;
+  gap: 2rem;
   flex-direction: column;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   padding: 2rem;
-
-  background: #e1e1e6;
+  cursor: pointer;
   border-radius: 24px;
 }
 .sound-card img {
@@ -79,54 +130,66 @@ main {
   top: 216px;
 }
 .sound-card  input{
-  -webkit-appearance: none;  /* Override default CSS styles */
+  -webkit-appearance: none; 
   appearance: none;
   width: 90px;
   height: 4px;
-  background-color: var( --icon-fill-ligth-mode);
   border-radius: 5px;
-
 }
-
-.slider::-webkit-slider-thumb {
+.sound-card .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 16px;
   height: 16px;
   border: 0;
-  background: url('./assets/soundIcons/sliderBall.svg');
   background-repeat: no-repeat;
   cursor: pointer;
 }
-
-
-.timer {
-  display: flex;
-  max-width: 20rem;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 126.166px;
-  line-height: 148px;
-  /* identical to box height */
-
-  text-align: center;
-  text-transform: uppercase;
-
-  color: var(--icon-fill-ligth-mode);
+.sound-card-ligth {
+  background: var(--bg-btn-ligth);
+}
+.sound-card-ligth .slider::-webkit-slider-thumb {
+background: url('./assets/soundIcons/dark-sliderBall.svg');
+}
+.sound-card-ligth  input{
+  background-color: var(--ligth-ligth-text)
+}
+.sound-card-dark {
+  background-color: var(--bg-btn-dark);
 }
 
-.controls {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 40px;
+.sound-card-dark {
+  background: var(--bg-btn-ligth);
+}
+.sound-card-dark .slider::-webkit-slider-thumb {
+background: url('./assets/soundIcons/white-sliderBall.svg');
+}
+.sound-card-dark  input{
+  background-color: #FFF
+}
+.sound-card-dark {
+  background-color: var(--bg-btn-dark);
 }
 
-.controls button {
-  border: none;
-  background: transparent;
-  border-radius: 999px;
-  cursor: pointer;
+
+
+
+
+
+
+@media screen and (max-width:650px){
+  header{
+    height: 6rem;
+  }
+  main {
+  
+  grid-template-columns:  1fr;
+  grid-template-rows: 1fr 1fr;
+ 
+  align-items: center;
+  justify-content: center;
+  background-color: #0a3442;
+  
+}
+  
 }
