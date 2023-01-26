@@ -1,18 +1,18 @@
 :root {
   --bg-darck-theme: #121214;
-  --bg-ligth-theme: #e5e5e5;
+  --bg-light-theme: #e5e5e5;
 
   --dark-color-text: #ffffff;
-  --ligth-ligth-text: #29292e;
+  --light-light-text: #29292e;
 
   --bg-btn-dark: #29292e;
   --bg-selected-btn-dark: #0a3442;
 
-  --bg-btn-ligth: #e1e1e6;
-  --bg-selected-btn-ligth: #02799d;
+  --bg-btn-light: #e1e1e6;
+  --bg-selected-btn-light: #02799d;
 
   --icon-fill-dark-mode: #c4c4cc;
-  --icon-fill-ligth-mode: #323238;
+  --icon-fill-light-mode: #323238;
 }
 * {
   margin: 0px;
@@ -20,9 +20,53 @@
   box-sizing: border-box;
 }
 
+body{
+  animation: moveToLight 1000ms  forwards;
+}
+
 .body-dark {
   background-color: var(--bg-darck-theme);
+  animation: moveToDark 1000ms  forwards;
 }
+ @keyframes moveToDark{
+  0%{
+      background-color: rgba(18, 18, 20, 0);
+
+  }
+    25%{
+      background-color: rgba(18, 18, 20, 0.25);
+
+  }
+    50%{
+      background-color: rgba(18, 18, 20, 0.50);
+
+  }
+    100%{
+      background-color: rgba(18, 18, 20, 1);
+
+  }
+ }
+
+  @keyframes moveToLight{
+  0%{
+      background-color: rgba(18, 18, 20, 1);
+
+  }
+    25%{
+      background-color: rgba(18, 18, 20, 0.50);
+
+  }
+    50%{
+      background-color: rgba(18, 18, 20, 0.25);
+
+  }
+    100%{
+      background-color: rgba(18, 18, 20, 0);
+
+  }
+ }
+
+
 header {
   height: 9.5rem;
   display: flex;
@@ -36,9 +80,7 @@ header svg{
 header .hide{
   display: none;
 }
-header   svg path{
-  fill:var(--ligth-ligth-text)
-}
+
 .page {
   display: flex;
   align-items: center;
@@ -72,9 +114,11 @@ main {
 
   text-align: center;
   text-transform: uppercase;
+ 
 }
-.timer-ligth {
-  color: var(--icon-fill-ligth-mode);
+.timer-light {
+  color: var(--icon-fill-light-mode);
+
 }
 .timer-dark {
   color: var(--dark-color-text);
@@ -87,20 +131,17 @@ main {
   gap: 40px;
 }
 
-.controls button {
-  border: none;
-  background: transparent;
-  border-radius: 999px;
-  cursor: pointer;
-}
-.controls  svg path {
-  fill:var(--ligth-ligth-text)
+
+.controls-light  svg path {
+  fill:var(--icon-fill-light-mode)
 }
 .controls-dark  svg path {
   fill:var(--icon-fill-dark-mode)
+
 }
 .sound-card  svg path{
- fill:var(--ligth-ligth-text);
+  fill:var(--light-light-text);
+ 
 }
 .sound-board {
   display: grid;
@@ -123,12 +164,7 @@ main {
   cursor: pointer;
   border-radius: 24px;
 }
-.sound-card img {
-  width: 44.21px;
-  height: 56px;
-  left: 789px;
-  top: 216px;
-}
+
 .sound-card  input{
   -webkit-appearance: none; 
   appearance: none;
@@ -145,14 +181,17 @@ main {
   background-repeat: no-repeat;
   cursor: pointer;
 }
-.sound-card-ligth {
-  background: var(--bg-btn-ligth);
+.sound-card-light {
+  background: var(--bg-btn-light);
 }
-.sound-card-ligth .slider::-webkit-slider-thumb {
+.sound-card-dark svg path{
+  fill:var(--icon-fill-dark-mode)
+}
+.sound-card-light .slider::-webkit-slider-thumb {
 background: url('./assets/soundIcons/dark-sliderBall.svg');
 }
-.sound-card-ligth  input{
-  background-color: var(--ligth-ligth-text)
+.sound-card-light  input{
+  background-color: var(--light-light-text)
 }
 .sound-card-dark {
   background-color: var(--bg-btn-dark);
