@@ -30,25 +30,50 @@ body{
 }
  @keyframes moveToDark{
   0%{
-      background-color: rgba(18, 18, 20, 0);
+      background-color: rgba(18, 18, 20, 0.1);
 
   }
-    25%{
-      background-color: rgba(18, 18, 20, 0.25);
+  10%{
+      background-color: rgba(18, 18, 20, 0.2);
 
   }
-    50%{
-      background-color: rgba(18, 18, 20, 0.50);
+  20%{
+      background-color: rgba(18, 18, 20, 0.3);
 
   }
-   75%{
-      background-color: rgba(18, 18, 20, 0.75);
+  30%{
+      background-color: rgba(18, 18, 20, 0.4);
 
   }
-    100%{
+  40%{
+      background-color: rgba(18, 18, 20, 0.5);
+
+  }
+  50%{
+      background-color: rgba(18, 18, 20, 0.6);
+
+  }
+  60%{
+      background-color: rgba(18, 18, 20, 0.7);
+
+  }
+  70%{
+      background-color: rgba(18, 18, 20, 0.8);
+
+  }
+  80%{
+      background-color: rgba(18, 18, 20, 0.9);
+
+  }
+  90%{
       background-color: rgba(18, 18, 20, 1);
 
   }
+  100%{
+      background-color: rgba(18, 18, 20, 0);
+
+  }
+   
  }
 
   @keyframes moveToLight{
