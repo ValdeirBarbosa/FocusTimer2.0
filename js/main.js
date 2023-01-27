@@ -1,12 +1,11 @@
 const bntMoon = document.querySelector('#moon')
 const btnSun = document.querySelector("#sun")
-
 const timer = document.querySelector(".timer")
 const btnControls = document.querySelector(".controls")
-
 const soundCards = document.querySelectorAll(".sound-card ")
-
 const body = document.querySelector("body")
+
+
 
 btnSun.addEventListener('click',()=>{
   bntMoon.classList.remove("hide")
@@ -44,3 +43,13 @@ bntMoon.addEventListener("click", () => {
 
   
 })
+
+for(const card of soundCards){
+  card.addEventListener('click',cardHandleClick)
+ }
+
+
+function cardHandleClick(event){
+  const card = event.target
+  card.classList.add("sound-card-play")
+}
