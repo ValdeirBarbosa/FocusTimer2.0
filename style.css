@@ -20,105 +20,82 @@
   box-sizing: border-box;
 }
 
-body{
-  animation: moveToLight 2000ms  forwards;
-
+body {
+  animation: moveToLight 1000ms forwards;
+  height: 100vh;
 }
 
 .body-dark {
-    animation: moveToDark 2000ms  forwards;
+  animation: moveToDark 1000ms forwards;
 }
- @keyframes moveToDark{
-  10%{
-      background-color: rgba(18, 18, 20, 0.1);
-
+@keyframes moveToDark {
+  10% {
+    background-color: rgba(18, 18, 20, 0.1);
   }
-  20%{
-      background-color: rgba(18, 18, 20, 0.2);
-
+  20% {
+    background-color: rgba(18, 18, 20, 0.2);
   }
-  30%{
-      background-color: rgba(18, 18, 20, 0.3);
-
+  30% {
+    background-color: rgba(18, 18, 20, 0.3);
   }
-  40%{
-      background-color: rgba(18, 18, 20, 0.4);
-
+  40% {
+    background-color: rgba(18, 18, 20, 0.4);
   }
-  50%{
-      background-color: rgba(18, 18, 20, 0.5);
-
+  50% {
+    background-color: rgba(18, 18, 20, 0.5);
   }
-  60%{
-      background-color: rgba(18, 18, 20, 0.6);
-
+  60% {
+    background-color: rgba(18, 18, 20, 0.6);
   }
-  70%{
-      background-color: rgba(18, 18, 20, 0.7);
-
+  70% {
+    background-color: rgba(18, 18, 20, 0.7);
   }
-  80%{
-      background-color: rgba(18, 18, 20, 0.8);
-
+  80% {
+    background-color: rgba(18, 18, 20, 0.8);
   }
-  90%{
-      background-color: rgba(18, 18, 20, 0.9);
-
+  90% {
+    background-color: rgba(18, 18, 20, 0.9);
   }
-  100%{
-      background-color: rgba(18, 18, 20, 1);
-
+  100% {
+    background-color: rgba(18, 18, 20, 1);
   }
- 
- }
+}
 
-  @keyframes moveToLight{
-  0%{
-      background-color: rgba(18, 18, 20, 1);
-
+@keyframes moveToLight {
+  0% {
+    background-color: rgba(18, 18, 20, 1);
   }
-  10%{
-      background-color: rgba(18, 18, 20, 0.9);
-
+  10% {
+    background-color: rgba(18, 18, 20, 0.9);
   }
-  20%{
-      background-color: rgba(18, 18, 20, 0.8);
-
+  20% {
+    background-color: rgba(18, 18, 20, 0.8);
   }
-  30%{
-      background-color: rgba(18, 18, 20, 0.7);
-
+  30% {
+    background-color: rgba(18, 18, 20, 0.7);
   }
-  40%{
-      background-color: rgba(18, 18, 20, 0.6);
-
+  40% {
+    background-color: rgba(18, 18, 20, 0.6);
   }
-  50%{
-      background-color: rgba(18, 18, 20, 0.5);
-
+  50% {
+    background-color: rgba(18, 18, 20, 0.5);
   }
-  60%{
-      background-color: rgba(18, 18, 20, 0.4);
-
+  60% {
+    background-color: rgba(18, 18, 20, 0.4);
   }
-  70%{
-      background-color: rgba(18, 18, 20, 0.3);
-
+  70% {
+    background-color: rgba(18, 18, 20, 0.3);
   }
-  80%{
-      background-color: rgba(18, 18, 20, 0.2);
-
+  80% {
+    background-color: rgba(18, 18, 20, 0.2);
   }
-  90%{
-      background-color: rgba(18, 18, 20, 0);
-
+  90% {
+    background-color: rgba(18, 18, 20, 0);
   }
-  100%{
-      background-color: rgba(18, 18, 20, 0);
-
+  100% {
+    background-color: rgba(18, 18, 20, 0);
   }
- }
-
+}
 
 header {
   height: 9.5rem;
@@ -127,10 +104,10 @@ header {
   align-items: flex-end;
   padding: 3.75rem 3.75rem 0 0;
 }
-header svg{
-  cursor:pointer
+header svg {
+  cursor: pointer;
 }
-header .hide{
+header .hide {
   display: none;
 }
 
@@ -167,14 +144,14 @@ main {
 
   text-align: center;
   text-transform: uppercase;
- 
 }
 .timer-light {
   color: var(--icon-fill-light-mode);
-
+  text-shadow: 2px 2px 2px chocolate;
 }
 .timer-dark {
   color: var(--dark-color-text);
+  text-shadow: 2px 2px 2px chocolate;
 }
 .controls {
   display: flex;
@@ -184,17 +161,20 @@ main {
   gap: 40px;
 }
 
-
-.controls-light  svg path {
-  fill:var(--icon-fill-light-mode)
+.controls svg {
+  cursor: pointer;
 }
-.controls-dark  svg path {
-  fill:var(--icon-fill-dark-mode)
 
+.controls-light svg path {
+  fill: var(--icon-fill-light-mode);
+  filter: drop-shadow(0px 0px 2px chocolate);
 }
-.sound-card  svg path{
-  fill:var(--light-light-text);
- 
+.controls-dark svg path {
+  fill: var(--icon-fill-dark-mode);
+  filter: drop-shadow(0px 0px 2px var(--bg-selected-btn-dark));
+}
+.sound-card svg path {
+  fill: var(--light-light-text);
 }
 
 .sound-board {
@@ -219,8 +199,8 @@ main {
   border-radius: 24px;
 }
 
-.sound-card  input{
-  -webkit-appearance: none; 
+.sound-card input {
+  -webkit-appearance: none;
   appearance: none;
   width: 90px;
   height: 4px;
@@ -238,80 +218,68 @@ main {
 .sound-card-light {
   background: var(--bg-btn-light);
   box-shadow: 4px 4px 8px var(--light-light-text);
-   
 }
-.sound-card-dark svg path{
-  fill:var(--icon-fill-dark-mode);
-  
+.sound-card-dark svg path {
+  fill: var(--icon-fill-dark-mode);
 }
 .sound-card-light .slider::-webkit-slider-thumb {
-background: url('./assets/soundIcons/dark-sliderBall.svg');
+  background: url("./assets/soundIcons/dark-sliderBall.svg");
 }
-.sound-card-light  input{
-  background-color: var(--light-light-text)
+.sound-card-light input {
+  background-color: var(--light-light-text);
 }
 .sound-card-dark {
   background-color: var(--bg-btn-dark);
-   box-shadow: 2px 2px 2px var(--bg-btn-light);
+  box-shadow: 2px 2px 2px var(--bg-btn-light);
 }
 
 .sound-card-dark {
   background: var(--bg-btn-ligth);
 }
 .sound-card-dark .slider::-webkit-slider-thumb {
-background: url('./assets/soundIcons/white-sliderBall.svg');
+  background: url("./assets/soundIcons/white-sliderBall.svg");
 }
-.sound-card-dark  input{
-  background-color: #FFF
+.sound-card-dark input {
+  background-color: #fff;
 }
 .sound-card-dark {
   background-color: var(--bg-btn-dark);
 }
 
-.sound-card-play{
+.sound-card-play {
   background-color: chocolate;
 }
 
-
-
-
-
-@media screen and (max-width:650px){
-  *{
-    padding: 0;;
+@media screen and (max-width: 600px) {
+  * {
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
   }
-  header{
+  header {
     position: relative;
-    margin-bottom:1rem;
-  
+    margin-bottom: 1rem;
   }
-  header svg{
+  header svg {
     position: absolute;
     top: 1rem;
     right: 1rem;
   }
   main {
-  /* margin-top:8rem; */
- display: flex;
- flex-direction: column;
- gap:2rem;
-  
-}
+    /* margin-top:8rem; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
 
-.sound-board{
-    
-
-  width:100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-/* background-color: #121214; */
-place-items: center;
-padding: 0 3rem 0 3rem;
-gap:1rem;
-}
-
-
+  .sound-board {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    /* background-color: #121214; */
+    place-items: center;
+    padding: 0 3rem 0 3rem;
+    gap: 1rem;
+  }
 }

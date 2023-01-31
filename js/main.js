@@ -50,6 +50,15 @@ for(const card of soundCards){
 
 
 function cardHandleClick(event){
-  const card = event.target
-  card.classList.add("sound-card-play")
+  const card = event.target;
+  const  cardIdSelect = card.id
+
+  for( let card of soundCards){
+      if(card.id === cardIdSelect){
+        card.classList.add("sound-card-play")
+      }else{
+         card.classList.remove("sound-card-play")
+      }
+
+  }
 }
