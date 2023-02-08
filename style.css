@@ -19,84 +19,6 @@
   padding: 0px;
   box-sizing: border-box;
 }
-
-body {
-  animation: moveToLight 1000ms forwards;
-  height: 100vh;
-}
-
-.body-dark {
-  animation: moveToDark 1000ms forwards;
-}
-@keyframes moveToDark {
-  10% {
-    background-color: rgba(18, 18, 20, 0.1);
-  }
-  20% {
-    background-color: rgba(18, 18, 20, 0.2);
-  }
-  30% {
-    background-color: rgba(18, 18, 20, 0.3);
-  }
-  40% {
-    background-color: rgba(18, 18, 20, 0.4);
-  }
-  50% {
-    background-color: rgba(18, 18, 20, 0.5);
-  }
-  60% {
-    background-color: rgba(18, 18, 20, 0.6);
-  }
-  70% {
-    background-color: rgba(18, 18, 20, 0.7);
-  }
-  80% {
-    background-color: rgba(18, 18, 20, 0.8);
-  }
-  90% {
-    background-color: rgba(18, 18, 20, 0.9);
-  }
-  100% {
-    background-color: rgba(18, 18, 20, 1);
-  }
-}
-
-@keyframes moveToLight {
-  0% {
-    background-color: rgba(18, 18, 20, 1);
-  }
-  10% {
-    background-color: rgba(18, 18, 20, 0.9);
-  }
-  20% {
-    background-color: rgba(18, 18, 20, 0.8);
-  }
-  30% {
-    background-color: rgba(18, 18, 20, 0.7);
-  }
-  40% {
-    background-color: rgba(18, 18, 20, 0.6);
-  }
-  50% {
-    background-color: rgba(18, 18, 20, 0.5);
-  }
-  60% {
-    background-color: rgba(18, 18, 20, 0.4);
-  }
-  70% {
-    background-color: rgba(18, 18, 20, 0.3);
-  }
-  80% {
-    background-color: rgba(18, 18, 20, 0.2);
-  }
-  90% {
-    background-color: rgba(18, 18, 20, 0);
-  }
-  100% {
-    background-color: rgba(18, 18, 20, 0);
-  }
-}
-
 header {
   height: 9.5rem;
   display: flex;
@@ -144,15 +66,17 @@ main {
 
   text-align: center;
   text-transform: uppercase;
-}
-.timer-light {
   color: var(--icon-fill-light-mode);
   text-shadow: 2px 2px 2px chocolate;
+
+  
 }
-.timer-dark {
-  color: var(--dark-color-text);
-  text-shadow: 2px 2px 2px chocolate;
+
+.timer-dark{
+
+  
 }
+
 .controls {
   display: flex;
   flex-direction: row;
@@ -163,19 +87,19 @@ main {
 
 .controls svg {
   cursor: pointer;
+  
 }
-
-.controls-light svg path {
-  fill: var(--icon-fill-light-mode);
-  filter: drop-shadow(0px 0px 2px chocolate);
+.controls svg path {
+  fill:var(--icon-fill-light-mode);
+  /* filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.25)); */
 }
 .controls-dark svg path {
-  fill: var(--icon-fill-dark-mode);
-  filter: drop-shadow(0px 0px 2px var(--bg-selected-btn-dark));
+  fill:#C4C4CC
+  /* filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.25)); */
 }
-.sound-card svg path {
-  fill: var(--light-light-text);
-}
+
+
+
 
 .sound-board {
   display: grid;
@@ -197,6 +121,11 @@ main {
   padding: 2rem;
   cursor: pointer;
   border-radius: 24px;
+  background: var(--bg-btn-light);
+  box-shadow: 4px 4px 8px RGBA(0,0,0,0.25);
+}
+.sound-card svg path {
+  fill: var(--light-light-text);
 }
 
 .sound-card input {
@@ -214,25 +143,22 @@ main {
   border: 0;
   background-repeat: no-repeat;
   cursor: pointer;
+  background: url("./assets/soundIcons/dark-sliderBall.svg");
 }
-.sound-card-light {
-  background: var(--bg-btn-light);
-  box-shadow: 4px 4px 8px var(--light-light-text);
+
+.sound-card input {
+  background-color: var(--light-light-text);
 }
+
+
+.sound-card-dark {
+  background-color: var(--bg-btn-dark);
+  box-shadow: 2px 2px 2px #0d0d0d;
+}
+
 .sound-card-dark svg path {
   fill: var(--icon-fill-dark-mode);
 }
-.sound-card-light .slider::-webkit-slider-thumb {
-  background: url("./assets/soundIcons/dark-sliderBall.svg");
-}
-.sound-card-light input {
-  background-color: var(--light-light-text);
-}
-.sound-card-dark {
-  background-color: var(--bg-btn-dark);
-  box-shadow: 2px 2px 2px var(--bg-btn-light);
-}
-
 .sound-card-dark {
   background: var(--bg-btn-ligth);
 }
@@ -240,15 +166,12 @@ main {
   background: url("./assets/soundIcons/white-sliderBall.svg");
 }
 .sound-card-dark input {
-  background-color: #fff;
+  background-color:var(--icon-fill-dark-mode);
 }
 .sound-card-dark {
   background-color: var(--bg-btn-dark);
 }
 
-.sound-card-play {
-  background-color: chocolate;
-}
 
 @media screen and (max-width: 600px) {
   * {
@@ -282,4 +205,11 @@ main {
     padding: 0 3rem 0 3rem;
     gap: 1rem;
   }
+}
+
+
+
+
+.hide{
+  display: none;
 }

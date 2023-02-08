@@ -1,64 +1,33 @@
-const bntMoon = document.querySelector('#moon')
-const btnSun = document.querySelector("#sun")
-const timer = document.querySelector(".timer")
-const btnControls = document.querySelector(".controls")
-const soundCards = document.querySelectorAll(".sound-card ")
+const btndarkModeOn = document.querySelector(" header #sun")
+const btndarkModeOff = document.querySelector(" header #moon")
 const body = document.querySelector("body")
 
-
-
-btnSun.addEventListener('click',()=>{
-  bntMoon.classList.remove("hide")
-  btnSun.classList.add("hide")
-  body.classList.add("body-dark")
-
-  timer.style.color = "#c4c4cc"
-
-  btnControls.classList.add("controls-dark")
-  btnControls.classList.remove("controls-light")
-
-  for(let card of soundCards){
-    card.classList.remove("sound-card-light")
+btndarkModeOn.addEventListener("click", () => {
+  btndarkModeOn.classList.add("hide")
+  btndarkModeOff.classList.remove("hide")
+  body.style.background = "#1E1E1E"
+  const timer = document.querySelector(".timer")
+  timer.style.color = "#FFF"
+  const controls = document.querySelector(".controls")
+    controls.classList.add("controls-dark")
+  const cards = document.querySelectorAll(".sound-card")
+  for (let card of cards) {
+    card.style.background = "#29292E"
     card.classList.add("sound-card-dark")
-
   }
-  
-  
-  
+})
+btndarkModeOff.addEventListener("click", () => {
+  btndarkModeOff.classList.add("hide")
+  btndarkModeOn.classList.remove("hide")
+  body.style.background = ""
+  const timer = document.querySelector(".timer")
+  timer.style.color = ""
+  const controls = document.querySelector(".controls")
+    controls.classList.remove("controls-dark")
+  const cards = document.querySelectorAll(".sound-card")
+  for (let card of cards) {
+    card.style.background = ""
+    card.classList.remove("sound-card-dark")
+  }
 })
 
-
-bntMoon.addEventListener("click", () => {
-  bntMoon.classList.add("hide")
-  btnSun.classList.remove("hide");
-  document.body.style.background = "#ffffff"
-  timer.style.color = "#323238"
-  btnControls.classList.remove("controls-dark")
-  btnControls.classList.add("controls-light")
-   body.classList.remove("body-dark")
-    for (let card of soundCards) {
-      card.classList.add("sound-card-light")
-      card.classList.remove("sound-card-dark")
-    }
-
-  
-})
-
-for(const card of soundCards){
-  card.addEventListener('click',cardHandleClick)
- }
-
-
-function cardHandleClick(event){
-  const card = event.target;
-  const  cardIdSelect = card.id
-
-  for( let card of soundCards){
-      if(card.id === cardIdSelect){
-        card.classList.add("sound-card-play")
-      }else{
-         card.classList.remove("sound-card-play")
-      }
-
-  }
-}
