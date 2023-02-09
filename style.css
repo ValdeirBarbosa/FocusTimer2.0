@@ -54,6 +54,8 @@ main {
   align-self: center;
   justify-self: center;
 }
+
+
 .timer {
   display: flex;
   max-width: 20rem;
@@ -72,10 +74,10 @@ main {
   
 }
 
-.timer-dark{
+/* .timer-dark{
 
   
-}
+} */
 
 .controls {
   display: flex;
@@ -170,6 +172,9 @@ main {
 }
 .sound-card-dark {
   background-color: var(--bg-btn-dark);
+}
+.sound-card-play{
+  background-color: #02799d;
 }
 
 
