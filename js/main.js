@@ -11,15 +11,49 @@ const pauseBtn = document.querySelector('#pause')
 const stopBtn = document.querySelector('#stop')
 const plusBtn = document.querySelector('#moreFiveMin')
 const minusBtn = document.querySelector('#minusFiveMin')
+let stopCounter = false
 
 let minutes = document.querySelector('.timer :nth-child(1)')
 let segundos = document.querySelector('.timer :nth-child(3)')
 let darkIsOn = false
 
+playBtn.addEventListener('click',()=>{
+  playBtn.classList.add('hide')
+  pauseBtn.classList.remove("hide")
+  let time = Date.now()
+ 
+  countDown(time)
+})
+pauseBtn.addEventListener("click", () => {
+  playBtn.classList.remove("hide")
+  pauseBtn.classList.add("hide")
+})
+
+
 plusBtn.addEventListener('click',()=>{
  let currentMinutes = minutes.textContent
- let pluFive = Number(currentMinutes)-5
- minutes.innerText = pluFive
+ let pluFive = Number(currentMinutes)+3
+ minutes.innerText = String(pluFive).padStart(2,"0")
+})
+stopBtn.addEventListener("click", () => {
+
+  minutes.innerText = "0".padStart(2, "0")
+  segundos.innerText = "0".padStart(2, "0")
+  stopCounter=true
+})
+
+minusBtn.addEventListener("click", () => {
+  let currentMinutes = minutes.textContent
+  let timeToSub = 0;
+  if (currentMinutes >= 5) {
+    timeToSub = 5
+  }else if (currentMinutes < 5 && currentMinutes>0){
+     timeToSub = 1
+  }
+    minutes.innerText = String(Number(currentMinutes) - timeToSub).padStart(
+      2,
+      "0"
+    )
 })
 
 
@@ -77,4 +111,25 @@ function cardHandleClick(event) {
   }
 }
 
+
+
+function countDown(time) {
+  setTimeout(function () {
+  
+    let minatual = document.querySelector('.timer :nth-child(1)')
+    let secAtual = document.querySelector('.timer :nth-child(3)')
+    let newSec = Number(secAtual.textContent)-1
+    if(newSec == 0){
+      segundos.textContent = 59
+      minatual.textContent = String(Number(minatual.textContent)-1).padStart(2,"0")
+
+    }else{
+      segundos.textContent = String(newSec).padStart(2,"0")
+
+    }
+   console.log(newSec)
+    countDown(time)
+    
+  }, 1000)
+}
 
