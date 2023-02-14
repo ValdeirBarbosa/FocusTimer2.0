@@ -124,7 +124,8 @@ main {
   cursor: pointer;
   border-radius: 24px;
   background: var(--bg-btn-light);
-  box-shadow: 4px 4px 8px RGBA(0,0,0,0.25);
+  /* box-shadow: 4px 4px 8px RGBA(0,0,0,0.25); */
+  box-shadow: 2px 2px 2px rgba(250, 106, 4, 0.428);
 }
 .sound-card svg path {
   fill: var(--light-light-text);

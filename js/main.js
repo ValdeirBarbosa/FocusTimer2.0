@@ -21,8 +21,8 @@ playBtn.addEventListener('click',()=>{
   playBtn.classList.add('hide')
   pauseBtn.classList.remove("hide")
   let time = Date.now()
- 
-  countDown(time)
+   countDown()
+
 })
 pauseBtn.addEventListener("click", () => {
   playBtn.classList.remove("hide")
@@ -111,25 +111,27 @@ function cardHandleClick(event) {
   }
 }
 
+function countDown(){
 
+    setTimeout(function () {
+      let sec = Number(segundos.textContent)
+      let min = Number(minutes.textContent)
 
-function countDown(time) {
-  setTimeout(function () {
-  
-    let minatual = document.querySelector('.timer :nth-child(1)')
-    let secAtual = document.querySelector('.timer :nth-child(3)')
-    let newSec = Number(secAtual.textContent)-1
-    if(newSec == 0){
-      segundos.textContent = 59
-      minatual.textContent = String(Number(minatual.textContent)-1).padStart(2,"0")
+      
+      if(min<=0){
+        if(sec <=0){
+          playBtn.classList.remove("hide")
+          pauseBtn.classList.add("hide")
+          
+          return
+        }
+      }
+      if (sec <= 0) {
+        minutes.textContent = String(min -1).padStart(2,"0")
+        sec = 60
+      }
+      segundos.textContent = String(sec - 1).padStart(2,"0")
 
-    }else{
-      segundos.textContent = String(newSec).padStart(2,"0")
-
-    }
-   console.log(newSec)
-    countDown(time)
-    
-  }, 1000)
+       countDown()
+    }, 1000)
 }
-
