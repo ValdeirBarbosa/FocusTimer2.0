@@ -13,21 +13,21 @@ const minusBtn = document.querySelector("#minusFiveMin")
 let stopCounter = false
 
 const minutes = document.querySelector(".timer :nth-child(1)")
-const segundos = document.querySelector(".timer :nth-child(3)")
+const seconds = document.querySelector(".timer :nth-child(3)")
 
 export {
   btndarkModeOn,
   btndarkModeOff,
-     body,
+  body,
   cards,
   timer,
   controls,
-    playBtn,
-   pauseBtn,
-    stopBtn,
+  playBtn,
+  pauseBtn,
+  stopBtn,
   plusBtn,
   minusBtn,
   stopCounter,
   minutes,
-  segundos,
+  seconds,
 }
