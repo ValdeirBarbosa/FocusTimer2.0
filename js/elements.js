@@ -12,8 +12,8 @@ const plusBtn = document.querySelector("#moreFiveMin")
 const minusBtn = document.querySelector("#minusFiveMin")
 let stopCounter = false
 
-const minutes = document.querySelector(".timer :nth-child(1)")
-const seconds = document.querySelector(".timer :nth-child(3)")
+const minutesDisplay = document.querySelector(".timer :nth-child(1)")
+const secondsDisplay = document.querySelector(".timer :nth-child(3)")
 
 export {
   btndarkModeOn,
@@ -28,6 +28,6 @@ export {
   plusBtn,
   minusBtn,
   stopCounter,
-  minutes,
-  seconds,
+  minutesDisplay,
+  secondsDisplay,
 }

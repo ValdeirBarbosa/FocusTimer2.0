@@ -1,21 +1,14 @@
 import {
   btndarkModeOn,
   btndarkModeOff,
-  body,
-  cards,
-  timer,
-  controls,
   playBtn,
   pauseBtn,
   stopBtn,
   plusBtn,
   minusBtn,
-  stopCounter,
-  minutes,
-  seconds,
 } from "./elements.js"
 
-export default function ({ themeScreen, controlCounter , timer}) {
+export default function ({ themeScreen, controlCounter, timer }) {
   btndarkModeOn.addEventListener("click", () => {
     themeScreen.darkModeOn()
   })
@@ -31,6 +24,8 @@ export default function ({ themeScreen, controlCounter , timer}) {
 
   pauseBtn.addEventListener('click', () => {
     controlCounter.counterPause()
+    timer.holdTimer()
+
   })
 
   plusBtn.addEventListener('click', () => {
@@ -43,6 +38,7 @@ export default function ({ themeScreen, controlCounter , timer}) {
 
   stopBtn.addEventListener('click', () => {
     controlCounter.stopCounter()
+    timer.resetTimer()
   })
 
 }

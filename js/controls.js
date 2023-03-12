@@ -1,8 +1,7 @@
 import {
   playBtn,
   pauseBtn,
-  minutes,
-  seconds
+  minutesDisplay
 } from "./elements.js"
 
 
@@ -13,7 +12,6 @@ export default function Controls() {
   function startCounter() {
     playBtn.classList.add('hide')
     pauseBtn.classList.remove("hide")
- 
   }
 
   function counterPause() {
@@ -27,16 +25,21 @@ export default function Controls() {
   }
 
   function minusFiveMinutes() {
-    let minValue = Number(minutes.textContent)
-    if (minValue >= 5) {
-      minutes.textContent = String(minValue -= 5).padStart(2, "0")
+    let minValue = Number(minutesDisplay.textContent)
+    if (minValue >= 1) {
+      if (minValue >= 5) {
+        minutesDisplay.textContent = String(minValue -= 5).padStart(2, "0")
+      } else {
+        minutesDisplay.textContent = String(minValue -= 1).padStart(2, "0")
+      }
+
     }
+
   }
 
   function stopCounter() {
     playBtn.classList.remove("hide")
     pauseBtn.classList.add("hide")
-
   }
 
 
