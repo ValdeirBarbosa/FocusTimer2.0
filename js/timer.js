@@ -37,7 +37,7 @@ export default function Timer({
         // updateDisplay();
         // reset();
         counterPause()
-        // Sounds().timeEnd()
+         Sounds().timeEnd()
         return;
       }
       if (sec <= 0) {
