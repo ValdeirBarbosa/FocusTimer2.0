@@ -6,7 +6,9 @@ import {
   stopBtn,
   plusBtn,
   minusBtn,
+  soundCards
 } from "./elements.js"
+import Sounds from "./sound.js"
 
 export default function ({ themeScreen, controlCounter, timer }) {
   btndarkModeOn.addEventListener("click", () => {

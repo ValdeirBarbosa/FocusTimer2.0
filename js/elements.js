@@ -14,6 +14,8 @@ let stopCounter = false
 
 const minutesDisplay = document.querySelector(".timer :nth-child(1)")
 const secondsDisplay = document.querySelector(".timer :nth-child(3)")
+const soundCards = document.querySelectorAll(".sound-card ")
+
 
 export {
   btndarkModeOn,
@@ -30,4 +32,5 @@ export {
   stopCounter,
   minutesDisplay,
   secondsDisplay,
+  soundCards
 }

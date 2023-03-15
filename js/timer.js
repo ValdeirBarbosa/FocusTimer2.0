@@ -1,4 +1,4 @@
-
+import Sounds from "./sound.js";
 
 export default function Timer({
   minutesDisplay,
@@ -8,8 +8,8 @@ export default function Timer({
   counterPause
 }) {
   let timerTimeOut
- 
-  
+
+
 
 
   function updateDisplay(newMinutes, seconds) {
@@ -36,8 +36,8 @@ export default function Timer({
 
         // updateDisplay();
         // reset();
+        Sounds().alarmSound()
         counterPause()
-        // Sounds().timeEnd()
         return;
       }
       if (sec <= 0) {
@@ -68,7 +68,7 @@ export default function Timer({
     holdTimer,
     resetTimer,
     updateMinutes,
-    
+
   }
 
 }
