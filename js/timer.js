@@ -38,6 +38,10 @@ export default function Timer({
         // reset();
         Sounds().alarmSound()
         counterPause()
+<<<<<<< HEAD
+=======
+         Sounds().timeEnd()
+>>>>>>> 41da94c6cde4bec9865ec58c4cb6c85d3a8ae648
         return;
       }
       if (sec <= 0) {
