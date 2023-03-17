@@ -20,8 +20,8 @@ export default function Controls() {
   }
 
   function plusFiveMinutes() {
-    let minValue = Number(minutes.textContent)
-    minutes.textContent = String(minValue += 5).padStart(2, "0")
+    let minValue = Number(minutesDisplay.textContent)
+    minutesDisplay.textContent = String(minValue += 5).padStart(2, "0")
   }
 
   function minusFiveMinutes() {

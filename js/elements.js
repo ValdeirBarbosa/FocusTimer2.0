@@ -10,7 +10,6 @@ const pauseBtn = document.querySelector("#pause")
 const stopBtn = document.querySelector("#stop")
 const plusBtn = document.querySelector("#moreFiveMin")
 const minusBtn = document.querySelector("#minusFiveMin")
-let stopCounter = false
 
 const minutesDisplay = document.querySelector(".timer :nth-child(1)")
 const secondsDisplay = document.querySelector(".timer :nth-child(3)")
@@ -29,7 +28,6 @@ export {
   stopBtn,
   plusBtn,
   minusBtn,
-  stopCounter,
   minutesDisplay,
   secondsDisplay,
   soundCards

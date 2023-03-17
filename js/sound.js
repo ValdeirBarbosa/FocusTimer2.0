@@ -1,3 +1,5 @@
+
+
 export default function () {
 
   const cofeShop = new Audio("https://github.com/ValdeirBarbosa/FocusTimer2.0/blob/main/sounds/370973__waweee__coffee-shop-ambience_remasteredmp3-14437.mp3?raw=true")
@@ -12,12 +14,33 @@ export default function () {
   }
 
 
+  function playSoundBackground(cardID) {
+    
+    switch (cardID) {
+      case "fireSong":
+        fire.play()
+        
+        break;
+      case "coffeShopSong":
+       fire.src=``
+        break;
+      case "rainSong":
+        fire.pause()
+        break;
+      case "woodSong":
+        fire.pause()
+        break;
+    }
+  }
+
+
+
 
 
 
   return {
     alarmSound,
-   
+    playSoundBackground
 
   }
 

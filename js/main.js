@@ -6,6 +6,7 @@ import Timer from "./timer.js"
 import {
   minutesDisplay,
   secondsDisplay,
+  soundCards
 } from "./elements.js";
 
 let minutes = Number(minutesDisplay.textContent);
@@ -26,7 +27,4 @@ Events({
   timer
 })
 
-
-
-
-
+ 

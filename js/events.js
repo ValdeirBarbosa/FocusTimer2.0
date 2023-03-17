@@ -11,6 +11,8 @@ import {
 import Sounds from "./sound.js"
 
 export default function ({ themeScreen, controlCounter, timer }) {
+
+
   btndarkModeOn.addEventListener("click", () => {
     themeScreen.darkModeOn()
   })
@@ -42,5 +44,27 @@ export default function ({ themeScreen, controlCounter, timer }) {
     controlCounter.stopCounter()
     timer.resetTimer()
   })
+
+  
+  for (const card of soundCards) {
+    card.addEventListener('click', cardHandleClick)
+  }
+
+
+  function cardHandleClick(event) {
+    const card = event.target;
+    const cardIdSelect = card.id
+
+    for (let card of soundCards) {
+      if (card.id === cardIdSelect) {
+        card.classList.add("sound-card-play")
+        Sounds().playSoundBackground(card.id)
+      } else {
+        card.classList.remove("sound-card-play")
+      }
+
+    }
+  }
+
 
 }
