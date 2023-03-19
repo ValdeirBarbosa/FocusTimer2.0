@@ -7,6 +7,8 @@ import {
   controls,
 } from "./elements.js"
 
+
+
 export default function Theme() {
   function darkModeOn() {
     btndarkModeOn.classList.add("hide")
@@ -17,6 +19,8 @@ export default function Theme() {
     for (let card of cards) {
       card.classList.add("sound-card-dark")
     }
+
+
   }
   function darkModeOff() {
     btndarkModeOff.classList.add("hide")
@@ -28,6 +32,7 @@ export default function Theme() {
       card.style.background = ""
       card.classList.remove("sound-card-dark")
     }
+
   }
 
   return {
