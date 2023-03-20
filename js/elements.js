@@ -17,6 +17,11 @@ const soundCards = document.querySelectorAll(".sound-card ")
 
 const slideWoodSongVolume = document.querySelector('#woodSongVolume')
 
+const btnSongWood = document.querySelector('#woodSong')
+const btnSongRain = document.querySelector('#rainSong')
+const btnSongCoffeShop = document.querySelector('#coffeShopSong')
+const btnSongFire = document.querySelector('#fireSong')
+
 
 export {
   btndarkModeOn,
@@ -33,10 +38,10 @@ export {
   minutesDisplay,
   secondsDisplay,
   soundCards,
-  slideWoodSongVolume
-  // btnSongWood,
-  // btnSongRain,
-  // btnSongCoffeShop,
-  // btnSongFire,
-  // btnAudio
+  slideWoodSongVolume,
+  btnSongWood,
+  btnSongRain,
+  btnSongCoffeShop,
+  btnSongFire,
+
 }

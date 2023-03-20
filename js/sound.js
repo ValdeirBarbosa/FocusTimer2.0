@@ -27,7 +27,7 @@ export default function () {
     fire.pause()
   }
   function woodSoundPlay() {
-    slideWoodSongVolume.value = "50"
+
     wood.loop = true
     wood.play()
   }

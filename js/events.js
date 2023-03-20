@@ -7,13 +7,17 @@ import {
   plusBtn,
   minusBtn,
   soundCards,
+  btnSongWood,
+  btnSongRain,
+  btnSongCoffeShop,
+  btnSongFire,
   slideWoodSongVolume
 } from "./elements.js"
 
 
 export default function ({ themeScreen, controlCounter, timer, sound }) {
 
-
+  let userChangeVol = false
   btndarkModeOn.addEventListener("click", () => {
     themeScreen.darkModeOn()
 
@@ -48,46 +52,45 @@ export default function ({ themeScreen, controlCounter, timer, sound }) {
   })
 
   slideWoodSongVolume.addEventListener('change', () => {
-    let actualVolume = Number(slideWoodSongVolume.value) * 0.1
+    let actualVolume = slideWoodSongVolume.value
     sound.setSoundVolume(slideWoodSongVolume, actualVolume)
 
   })
 
 
-  for (const card of soundCards) {
-    card.addEventListener('click', cardHandleClick)
-  }
+
+  btnSongWood.addEventListener('click', () => {
+    unselectCardSong(btnSongWood.id)
+    btnSongWood.classList.add('sound-card-play')
+
+  })
+  btnSongRain.addEventListener('click', () => {
+    unselectCardSong(btnSongRain.id)
+    btnSongRain.classList.add('sound-card-play')
+  })
+  btnSongCoffeShop.addEventListener('click', () => {
+    unselectCardSong(btnSongCoffeShop.id)
+    btnSongCoffeShop.classList.add('sound-card-play')
+  })
+  btnSongFire.addEventListener('click', () => {
+    unselectCardSong(btnSongFire.id)
+    btnSongFire.classList.add('sound-card-play')
+  })
 
 
-  function cardHandleClick(event) {
-    const card = event.target;
-    const cardIdSelect = card.id
+  function unselectCardSong(cardid) {
     sound.stopSoundBackground()
-
     for (let card of soundCards) {
-      if (card.id === cardIdSelect) {
-       
-        card.classList.add("sound-card-play")
-        switch (cardIdSelect) {
-          case ("woodSong"):
-            sound.woodSoundPlay()
-            break;
-          case ("rainSong"):
-            sound.rainsSoundPlay()
-            break;
-          case ("coffeShopSong"):
-            sound.coffeShopPlay()
-            break;
-          case ("fireSong"):
-            sound.fireSoundPlay()
-            break;
-        }
+      if (card.id != cardid) {
+        card.classList.remove('sound-card-play')
       } else {
-        card.classList.remove("sound-card-play")
+        let volCard = document.querySelector(`#${card.id} input`)
+
       }
 
     }
   }
+
 }
 
 
