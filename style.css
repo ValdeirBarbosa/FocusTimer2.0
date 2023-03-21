@@ -55,7 +55,6 @@ main {
   justify-self: center;
 }
 
-
 .timer {
   display: flex;
   max-width: 20rem;
@@ -70,8 +69,6 @@ main {
   text-transform: uppercase;
   color: var(--icon-fill-light-mode);
   text-shadow: 2px 2px 2px chocolate;
-
-  
 }
 
 /* .timer-dark{
@@ -89,19 +86,17 @@ main {
 
 .controls svg {
   cursor: pointer;
-  
 }
+
 .controls svg path {
-  fill:var(--icon-fill-light-mode);
+  fill: var(--icon-fill-light-mode);
   /* filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.25)); */
 }
+
 .controls-dark svg path {
-  fill:#C4C4CC
+  fill: #c4c4cc;
   /* filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.25)); */
 }
-
-
-
 
 .sound-board {
   display: grid;
@@ -127,6 +122,7 @@ main {
   /* box-shadow: 4px 4px 8px RGBA(0,0,0,0.25); */
   box-shadow: 2px 2px 2px rgba(250, 106, 4, 0.428);
 }
+
 .sound-card svg path {
   fill: var(--light-light-text);
 }
@@ -153,7 +149,6 @@ main {
   background-color: var(--light-light-text);
 }
 
-
 .sound-card-dark {
   background-color: var(--bg-btn-dark);
   box-shadow: 2px 2px 2px #0d0d0d;
@@ -169,15 +164,18 @@ main {
   background: url("./assets/soundIcons/white-sliderBall.svg");
 }
 .sound-card-dark input {
-  background-color:var(--icon-fill-dark-mode);
+  background-color: var(--icon-fill-dark-mode);
 }
 .sound-card-dark {
   background-color: var(--bg-btn-dark);
 }
-.sound-card-play{
+.sound-card-play {
   background-color: #02799d;
 }
 
+.sound-volume-set {
+  align-self: start;
+}
 
 @media screen and (max-width: 600px) {
   * {
@@ -213,9 +211,6 @@ main {
   }
 }
 
-
-
-
-.hide{
+.hide {
   display: none;
 }

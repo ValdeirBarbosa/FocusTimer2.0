@@ -5,6 +5,8 @@ import {
   cards,
   timer,
   controls,
+  btnSoundOn,
+  btnSoundOff
 } from "./elements.js"
 
 

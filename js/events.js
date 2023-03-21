@@ -63,14 +63,17 @@ export default function ({ themeScreen, controlCounter, timer, sound }) {
   btnSongRain.addEventListener('click', () => {
     unselectCardSong(btnSongRain.id)
     btnSongRain.classList.add('sound-card-play')
+    sound.rainsSoundPlay()
   })
   btnSongCoffeShop.addEventListener('click', () => {
     unselectCardSong(btnSongCoffeShop.id)
     btnSongCoffeShop.classList.add('sound-card-play')
+    sound.coffeShopPlay()
   })
   btnSongFire.addEventListener('click', () => {
     unselectCardSong(btnSongFire.id)
     btnSongFire.classList.add('sound-card-play')
+    sound.fireSoundPlay()
   })
 
 
@@ -84,6 +87,25 @@ export default function ({ themeScreen, controlCounter, timer, sound }) {
     }
   }
 
+  slideWoodSongVolume.addEventListener('change', () => {
+    sound.setVolumeSound(slideWoodSongVolume.id, slideWoodSongVolume.value)
+    console.log(slideWoodSongVolume.value)
+  })
+
+  slideRainSongVolume.addEventListener('change', () => {
+    sound.setVolumeSound(slideRainSongVolume.id, slideRainSongVolume.value)
+    console.log(slideRainSongVolume.value)
+  })
+
+  slideCoffeShopSongVolume.addEventListener('change', () => {
+    sound.setVolumeSound(slideCoffeShopSongVolume.id, slideCoffeShopSongVolume.value)
+    console.log(slideCoffeShopSongVolume.value)
+  })
+
+  slidefireSongVolume.addEventListener('change', () => {
+    sound.setVolumeSound(slidefireSongVolume.id, slidefireSongVolume.value)
+    console.log(slidefireSongVolume.value)
+  })
 
 
 

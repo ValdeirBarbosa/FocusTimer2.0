@@ -1,5 +1,7 @@
 const btndarkModeOn = document.querySelector("header #sun")
 const btndarkModeOff = document.querySelector("header #moon")
+const btnSoundOn = document.querySelector('#soundOn')
+const btnSoundOff = document.querySelector('#soundOff')
 const body = document.querySelector("body")
 const cards = document.querySelectorAll(".sound-card")
 const timer = document.querySelector(".timer")
@@ -41,13 +43,15 @@ export {
   minutesDisplay,
   secondsDisplay,
   soundCards,
-  slideWoodSongVolume,
   btnSongWood,
   btnSongRain,
   btnSongCoffeShop,
   btnSongFire,
+  slideWoodSongVolume,
   slideRainSongVolume,
   slideCoffeShopSongVolume,
-  slidefireSongVolume
+  slidefireSongVolume,
+  btnSoundOn,
+  btnSoundOff
 
 }
