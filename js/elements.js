@@ -16,6 +16,9 @@ const secondsDisplay = document.querySelector(".timer :nth-child(3)")
 const soundCards = document.querySelectorAll(".sound-card ")
 
 const slideWoodSongVolume = document.querySelector('#woodSongVolume')
+const slideRainSongVolume = document.querySelector('#rainSongVolume')
+const slideCoffeShopSongVolume = document.querySelector('#coffeShopSongVolume')
+const slidefireSongVolume = document.querySelector('#fireSongVolume')
 
 const btnSongWood = document.querySelector('#woodSong')
 const btnSongRain = document.querySelector('#rainSong')
@@ -43,5 +46,8 @@ export {
   btnSongRain,
   btnSongCoffeShop,
   btnSongFire,
+  slideRainSongVolume,
+  slideCoffeShopSongVolume,
+  slidefireSongVolume
 
 }

@@ -11,13 +11,15 @@ import {
   btnSongRain,
   btnSongCoffeShop,
   btnSongFire,
-  slideWoodSongVolume
+  slideWoodSongVolume,
+  slideRainSongVolume,
+  slideCoffeShopSongVolume,
+  slidefireSongVolume
 } from "./elements.js"
 
 
 export default function ({ themeScreen, controlCounter, timer, sound }) {
 
-  let userChangeVol = false
   btndarkModeOn.addEventListener("click", () => {
     themeScreen.darkModeOn()
 
@@ -51,17 +53,11 @@ export default function ({ themeScreen, controlCounter, timer, sound }) {
     timer.resetTimer()
   })
 
-  slideWoodSongVolume.addEventListener('change', () => {
-    let actualVolume = slideWoodSongVolume.value
-    sound.setSoundVolume(slideWoodSongVolume, actualVolume)
-
-  })
-
-
 
   btnSongWood.addEventListener('click', () => {
     unselectCardSong(btnSongWood.id)
     btnSongWood.classList.add('sound-card-play')
+    sound.woodSoundPlay()
 
   })
   btnSongRain.addEventListener('click', () => {
@@ -78,18 +74,18 @@ export default function ({ themeScreen, controlCounter, timer, sound }) {
   })
 
 
-  function unselectCardSong(cardid) {
+  function unselectCardSong(cardId) {
     sound.stopSoundBackground()
     for (let card of soundCards) {
-      if (card.id != cardid) {
+      if (card.id != cardId) {
         card.classList.remove('sound-card-play')
-      } else {
-        let volCard = document.querySelector(`#${card.id} input`)
-
       }
 
     }
   }
+
+
+
 
 }
 

@@ -1,4 +1,4 @@
-import { slideWoodSongVolume } from "./elements.js"
+
 
 
 export default function () {
@@ -11,14 +11,9 @@ export default function () {
   const alarm = new Audio("https://github.com/ValdeirBarbosa/FocusTimer2.0/blob/main/sounds/old-mechanic-alarm-clock-140410.mp3?raw=true")
 
 
-
   function alarmSound() {
     alarm.play()
   }
-
-
-
-
   function fireSoundPlay() {
     fire.loop = true
     fire.play()
@@ -59,9 +54,6 @@ export default function () {
     fire.pause()
   }
 
-  function setSoundVolume(sound, volume) {
-    sound.value = volume
-  }
 
 
   function stopSoundBackground() {
@@ -79,15 +71,11 @@ export default function () {
   return {
     alarmSound,
     woodSoundPlay,
-    woodSoundStop,
     coffeShopPlay,
-    coffeShoprStop,
     rainsSoundPlay,
-    rainsSoundStop,
     fireSoundPlay,
-    fireSoundStop,
     stopSoundBackground,
-    setSoundVolume
+
 
   }
 
