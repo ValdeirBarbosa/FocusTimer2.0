@@ -71,11 +71,6 @@ main {
   text-shadow: 2px 2px 2px chocolate;
 }
 
-/* .timer-dark{
-
-  
-} */
-
 .controls {
   display: flex;
   flex-direction: row;
@@ -104,6 +99,7 @@ main {
   grid-template-rows: 1fr 1fr;
   width: 308px;
   height: 336px;
+  position: relative;
 }
 .sound-card {
   width: 138px;
@@ -174,7 +170,18 @@ main {
 }
 
 .sound-volume-set {
+  position: absolute;
+  z-index: 2;
+  top: -60px;
+  left: 290px;
   align-self: start;
+}
+.sound-volume-set svg {
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
 }
 
 @media screen and (max-width: 600px) {
@@ -209,8 +216,11 @@ main {
     padding: 0 3rem 0 3rem;
     gap: 1rem;
   }
-}
-
-.hide {
-  display: none;
+  .sound-volume-set {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: -280px;
+    align-self: start;
+  }
 }

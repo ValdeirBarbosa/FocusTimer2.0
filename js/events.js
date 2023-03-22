@@ -14,11 +14,17 @@ import {
   slideWoodSongVolume,
   slideRainSongVolume,
   slideCoffeShopSongVolume,
-  slidefireSongVolume
+  slidefireSongVolume,
+  cards,
+  btnSoundOff,
+  btnSoundOn,
+
 } from "./elements.js"
 
 
 export default function ({ themeScreen, controlCounter, timer, sound }) {
+
+
 
   btndarkModeOn.addEventListener("click", () => {
     themeScreen.darkModeOn()
@@ -54,26 +60,50 @@ export default function ({ themeScreen, controlCounter, timer, sound }) {
   })
 
 
-  btnSongWood.addEventListener('click', () => {
-    unselectCardSong(btnSongWood.id)
-    btnSongWood.classList.add('sound-card-play')
-    sound.woodSoundPlay()
+  btnSongWood.addEventListener('click', (event) => {
+
+    if (event.target === btnSongWood) {
+      btnSoundOn.classList.remove('hide')
+      btnSoundOff.classList.add('hide')
+      unselectCardSong(btnSongWood.id)
+      btnSongWood.classList.add('sound-card-play')
+      sound.woodSoundPlay()
+      slideWoodSongVolume.value = 50
+    }
 
   })
-  btnSongRain.addEventListener('click', () => {
-    unselectCardSong(btnSongRain.id)
-    btnSongRain.classList.add('sound-card-play')
-    sound.rainsSoundPlay()
+  btnSongRain.addEventListener('click', (event) => {
+    if (event.target === btnSongRain) {
+      btnSoundOn.classList.remove('hide')
+      btnSoundOff.classList.add('hide')
+      unselectCardSong(btnSongRain.id)
+      btnSongRain.classList.add('sound-card-play')
+      sound.rainsSoundPlay()
+      slideRainSongVolume.value = 50
+    }
+
   })
-  btnSongCoffeShop.addEventListener('click', () => {
-    unselectCardSong(btnSongCoffeShop.id)
-    btnSongCoffeShop.classList.add('sound-card-play')
-    sound.coffeShopPlay()
+  btnSongCoffeShop.addEventListener('click', (event) => {
+    if (event.target === btnSongCoffeShop) {
+      btnSoundOn.classList.remove('hide')
+      btnSoundOff.classList.add('hide')
+      unselectCardSong(btnSongCoffeShop.id)
+      btnSongCoffeShop.classList.add('sound-card-play')
+      sound.coffeShopPlay()
+      slideCoffeShopSongVolume.value = 50
+    }
   })
-  btnSongFire.addEventListener('click', () => {
-    unselectCardSong(btnSongFire.id)
-    btnSongFire.classList.add('sound-card-play')
-    sound.fireSoundPlay()
+  btnSongFire.addEventListener('click', (event) => {
+    if (event.target === btnSongFire) {
+      btnSoundOn.classList.remove('hide')
+      btnSoundOff.classList.add('hide')
+      unselectCardSong(btnSongFire.id)
+      btnSongFire.classList.add('sound-card-play')
+      sound.fireSoundPlay()
+      slidefireSongVolume.value = 50
+
+    }
+
   })
 
 
@@ -88,6 +118,7 @@ export default function ({ themeScreen, controlCounter, timer, sound }) {
   }
 
   slideWoodSongVolume.addEventListener('change', () => {
+
     sound.setVolumeSound(slideWoodSongVolume.id, slideWoodSongVolume.value)
     console.log(slideWoodSongVolume.value)
   })
@@ -107,6 +138,27 @@ export default function ({ themeScreen, controlCounter, timer, sound }) {
     console.log(slidefireSongVolume.value)
   })
 
+  btnSoundOff.addEventListener('click', () => {
+
+    btnSoundOff.classList.add('hide')
+    btnSoundOn.classList.remove('hide')
+  })
+  btnSoundOn.addEventListener('click', () => {
+
+
+    btnSoundOff.classList.remove('hide')
+    btnSoundOn.classList.add('hide')
+    sound.stopSoundBackground()
+    disableSound()
+
+
+  })
+
+  function disableSound() {
+    for (let card of cards) {
+      card.classList.remove('sound-card-play')
+    }
+  }
 
 
 }

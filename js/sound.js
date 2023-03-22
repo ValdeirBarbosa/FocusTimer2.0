@@ -1,11 +1,4 @@
 
-import {
-  slideWoodSongVolume,
-  slideRainSongVolume,
-  slideCoffeShopSongVolume,
-  slidefireSongVolume
-} from "./elements.js"
-
 export default function () {
 
 
@@ -21,31 +14,25 @@ export default function () {
   }
   function fireSoundPlay() {
     fire.loop = true
-
     fire.play()
   }
   function fireSoundStop() {
     fire.pause()
   }
   function woodSoundPlay() {
-
     wood.loop = true
-
     wood.play()
   }
   function woodSoundStop() {
     wood.pause()
   }
-
   function coffeShopPlay() {
     coffeeShop.loop = true
     coffeeShop.play()
   }
-
   function coffeShoprStop() {
     coffeeShop.pause()
   }
-
   function rainsSoundPlay() {
     rain.loop = true
     rain.play()
@@ -75,8 +62,6 @@ export default function () {
       case 'fireSongVolume':
         fire.volume = volumeValue * 0.01
         break
-
-
     }
   }
 
@@ -101,7 +86,8 @@ export default function () {
     rainsSoundPlay,
     fireSoundPlay,
     stopSoundBackground,
-    setVolumeSound
+    setVolumeSound,
+
 
 
   }

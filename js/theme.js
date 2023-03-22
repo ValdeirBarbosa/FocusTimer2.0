@@ -5,8 +5,8 @@ import {
   cards,
   timer,
   controls,
-  btnSoundOn,
-  btnSoundOff
+  soundbtn
+
 } from "./elements.js"
 
 
@@ -14,6 +14,7 @@ import {
 export default function Theme() {
   function darkModeOn() {
     btndarkModeOn.classList.add("hide")
+    soundbtn.classList.add('controls-dark')
     btndarkModeOff.classList.remove("hide")
     body.style.background = "#1E1E1E"
     timer.style.color = "#FFF"
@@ -23,8 +24,12 @@ export default function Theme() {
     }
 
 
+
+
+
   }
   function darkModeOff() {
+    soundbtn.classList.remove('controls-dark')
     btndarkModeOff.classList.add("hide")
     btndarkModeOn.classList.remove("hide")
     body.style.background = ""

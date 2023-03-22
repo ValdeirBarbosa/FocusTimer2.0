@@ -1,7 +1,8 @@
 const btndarkModeOn = document.querySelector("header #sun")
 const btndarkModeOff = document.querySelector("header #moon")
-const btnSoundOn = document.querySelector('#soundOn')
+
 const btnSoundOff = document.querySelector('#soundOff')
+const btnSoundOn = document.querySelector('#soundOn')
 const body = document.querySelector("body")
 const cards = document.querySelectorAll(".sound-card")
 const timer = document.querySelector(".timer")
@@ -26,6 +27,7 @@ const btnSongWood = document.querySelector('#woodSong')
 const btnSongRain = document.querySelector('#rainSong')
 const btnSongCoffeShop = document.querySelector('#coffeShopSong')
 const btnSongFire = document.querySelector('#fireSong')
+const soundbtn = document.querySelector('.sound-volume-set')
 
 
 export {
@@ -51,7 +53,8 @@ export {
   slideRainSongVolume,
   slideCoffeShopSongVolume,
   slidefireSongVolume,
+  btnSoundOff,
   btnSoundOn,
-  btnSoundOff
+  soundbtn
 
 }

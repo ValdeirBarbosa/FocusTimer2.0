@@ -41,7 +41,7 @@ export default function Timer({
         return;
       }
       if (sec <= 0) {
-        sec = 3;
+        sec = 60;
         --min;
       }
 
