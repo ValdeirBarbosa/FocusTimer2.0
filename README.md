@@ -2,9 +2,9 @@
 ## Desafio Nivel 05 Curso Explorer turma 07  Rocketseat
 ### O desafio desta vez era aplicar as técnicas aprendidas no nivel 5 do Explorer:
 1. Introdução a clean code e refatoração de código; 
-2. Injeções de dependendencias; 
-3. Modularização de Javascrip;
-4. Manipulando audio com Javascript;
+2. Injeções de dependêndencias; 
+3. Modularização de Javascript;
+4. Manipulando áudio com Javascript;
 5. Manipulação de classes com Javascript. 
 ***
 ![image](https://user-images.githubusercontent.com/6127742/226783600-5f3906f8-0fb2-4911-8f83-235a0d28fdca.png)
