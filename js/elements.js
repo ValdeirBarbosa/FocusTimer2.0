@@ -24,10 +24,16 @@ const slideCoffeShopSongVolume = document.querySelector('#coffeShopSongVolume')
 const slidefireSongVolume = document.querySelector('#fireSongVolume')
 
 const btnSongWood = document.querySelector('#woodSong')
+const btnSongWoodSVG = document.querySelector('#woodSong svg')
 const btnSongRain = document.querySelector('#rainSong')
+const btnSongRainSVG = document.querySelector('#rainSong svg')
 const btnSongCoffeShop = document.querySelector('#coffeShopSong')
+const btnSongCoffeShopSVG= document.querySelector('#coffeShopSong svg')
 const btnSongFire = document.querySelector('#fireSong')
+const btnSongFireSVG = document.querySelector('#fireSong svg')
+
 const soundbtn = document.querySelector('.sound-volume-set')
+
 
 
 export {
@@ -49,6 +55,10 @@ export {
   btnSongRain,
   btnSongCoffeShop,
   btnSongFire,
+  btnSongWoodSVG,
+  btnSongRainSVG,
+  btnSongCoffeShopSVG,
+  btnSongFireSVG,
   slideWoodSongVolume,
   slideRainSongVolume,
   slideCoffeShopSongVolume,

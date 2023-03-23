@@ -27,14 +27,12 @@ export default function Controls() {
   function minusFiveMinutes() {
     let minValue = Number(minutesDisplay.textContent)
     if (minValue >= 1) {
-      if (minValue >= 5) {
+      if (minValue >= 6) {
         minutesDisplay.textContent = String(minValue -= 5).padStart(2, "0")
       } else {
         minutesDisplay.textContent = String(minValue -= 1).padStart(2, "0")
       }
-
     }
-
   }
 
   function stopCounter() {

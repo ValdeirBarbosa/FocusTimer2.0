@@ -11,6 +11,10 @@ import {
   btnSongRain,
   btnSongCoffeShop,
   btnSongFire,
+  btnSongWoodSVG,
+  btnSongRainSVG,
+  btnSongCoffeShopSVG,
+  btnSongFireSVG,
   slideWoodSongVolume,
   slideRainSongVolume,
   slideCoffeShopSongVolume,
@@ -62,47 +66,46 @@ export default function ({ themeScreen, controlCounter, timer, sound }) {
 
   btnSongWood.addEventListener('click', (event) => {
 
-    if (event.target === btnSongWood) {
-      btnSoundOn.classList.remove('hide')
-      btnSoundOff.classList.add('hide')
-      unselectCardSong(btnSongWood.id)
-      btnSongWood.classList.add('sound-card-play')
-      sound.woodSoundPlay()
+    if (event.target !== slideWoodSongVolume) {
       slideWoodSongVolume.value = 50
     }
+    btnSoundOn.classList.remove('hide')
+    btnSoundOff.classList.add('hide')
+    unselectCardSong(btnSongWood.id)
+    btnSongWood.classList.add('sound-card-play')
+    sound.woodSoundPlay()
 
   })
   btnSongRain.addEventListener('click', (event) => {
-    if (event.target === btnSongRain) {
-      btnSoundOn.classList.remove('hide')
-      btnSoundOff.classList.add('hide')
-      unselectCardSong(btnSongRain.id)
-      btnSongRain.classList.add('sound-card-play')
-      sound.rainsSoundPlay()
+    if (event.target !== slideRainSongVolume) {
       slideRainSongVolume.value = 50
     }
+    btnSoundOn.classList.remove('hide')
+    btnSoundOff.classList.add('hide')
+    unselectCardSong(btnSongRain.id)
+    btnSongRain.classList.add('sound-card-play')
+    sound.rainsSoundPlay()
 
   })
   btnSongCoffeShop.addEventListener('click', (event) => {
-    if (event.target === btnSongCoffeShop) {
-      btnSoundOn.classList.remove('hide')
-      btnSoundOff.classList.add('hide')
-      unselectCardSong(btnSongCoffeShop.id)
-      btnSongCoffeShop.classList.add('sound-card-play')
-      sound.coffeShopPlay()
+    if (event.target === slideCoffeShopSongVolume) {
       slideCoffeShopSongVolume.value = 50
     }
+    btnSoundOn.classList.remove('hide')
+    btnSoundOff.classList.add('hide')
+    unselectCardSong(btnSongCoffeShop.id)
+    btnSongCoffeShop.classList.add('sound-card-play')
+    sound.coffeShopPlay()
   })
   btnSongFire.addEventListener('click', (event) => {
-    if (event.target === btnSongFire) {
-      btnSoundOn.classList.remove('hide')
-      btnSoundOff.classList.add('hide')
-      unselectCardSong(btnSongFire.id)
-      btnSongFire.classList.add('sound-card-play')
-      sound.fireSoundPlay()
-      slidefireSongVolume.value = 50
-
+    if (event.target === slidefireSongVolume) {
+       slidefireSongVolume.value = 50
     }
+    btnSoundOn.classList.remove('hide')
+    btnSoundOff.classList.add('hide')
+    unselectCardSong(btnSongFire.id)
+    btnSongFire.classList.add('sound-card-play')
+    sound.fireSoundPlay()
 
   })
 
