@@ -88,7 +88,7 @@ export default function ({ themeScreen, controlCounter, timer, sound }) {
 
   })
   btnSongCoffeShop.addEventListener('click', (event) => {
-    if (event.target === slideCoffeShopSongVolume) {
+    if (event.target !== slideCoffeShopSongVolume) {
       slideCoffeShopSongVolume.value = 50
     }
     btnSoundOn.classList.remove('hide')
@@ -98,7 +98,7 @@ export default function ({ themeScreen, controlCounter, timer, sound }) {
     sound.coffeShopPlay()
   })
   btnSongFire.addEventListener('click', (event) => {
-    if (event.target === slidefireSongVolume) {
+    if (event.target !== slidefireSongVolume) {
        slidefireSongVolume.value = 50
     }
     btnSoundOn.classList.remove('hide')
